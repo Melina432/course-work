@@ -1,0 +1,48 @@
+<!doctype html>
+<html> 
+    <head>
+        <title>Contact Form</title>
+<link rel="stylesheet"  type="text/css" href="externalcss.css">
+</head>
+
+
+<body>
+        <nav class="menu">
+            <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Research.html">Research</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            </ul> 
+            </nav>
+            <div class="contact-title">
+                <h1>Hello</h1>
+                <h2>Let's Connect</h2>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form" name="myForm" method="post" onsubmit="validateForm()">
+                    <input name="name" type="text" class="form-control" placeholder="Your Name" ><br>
+                    <input name= "Email" type="text" class="form-control" placeholder="Your Email" ><br>
+                    <input name= "Country" type="text" class="form-control" placeholder="Your Country" ><br>
+                    
+                    <textarea name="message" class="form-control" placeholder="Message" rows="4"></textarea><br>
+                    <input type="submit" class="form-control submit" value="SEND MESSAGE">
+                </form>
+                </div>
+                <script>
+                    function validateForm() 
+                      {
+                        var a = document.forms["myForm"]["name"].value;
+                        var b = document.forms["myForm"]["Email"].value;
+                        var c = document.forms["myForm"]["Country"].value;
+                        var d = document.forms["myForm"]["message"].value;
+                        if (a == "" || b=="" || c=="" || d==""){
+                          alert("Empty fields found..");
+                        }else{
+                          alert("Succesfully Submitted.");
+                        }
+                      }
+                </script>
+</body>
+</html>
